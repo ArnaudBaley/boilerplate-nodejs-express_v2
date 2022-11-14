@@ -1,0 +1,19 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "url-shortener",
+        "description": "This application allow users to convert URLs in order to reduce the length of them.",
+        "version": "1.0"
+    },
+    "produces": ["application/json"],
+    "paths": {
+        "/": {
+            "get": {
+                "x-swagger-router-controller": "home",
+                "operationId": "index",
+                "description": "X",
+                "responses": {}
+            }
+        }
+    }
+}
