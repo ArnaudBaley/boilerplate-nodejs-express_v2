@@ -7,11 +7,19 @@
     },
     "produces": ["application/json"],
     "paths": {
-        "/": {
-            "get": {
-                "x-swagger-router-controller": "home",
-                "operationId": "index",
-                "description": "X",
+        "/my-project/api/shorturl": {
+            "post": {
+                "parameters": [
+                    {
+                        "name": "originalUrl",
+                        "description": "URL to short",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "www.reallylongbrandname.com"
+                        }
+                    }
+                ],
                 "responses": {}
             }
         }
