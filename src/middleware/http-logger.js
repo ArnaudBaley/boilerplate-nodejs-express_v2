@@ -1,5 +1,5 @@
-import morgan from "morgan";
-import { logger } from "./logger.js";
+const morgan = require("morgan");
+const { logger } = require('./logger.js');
 
 // Use custom logger
 const stream = {
@@ -11,4 +11,4 @@ const httpLogger = morgan(
     { stream }
 );
 
-export { httpLogger };
+module.exports = { httpLogger };

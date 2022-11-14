@@ -1,5 +1,5 @@
-import winston from 'winston';
-import * as config from "../config/log.js";
+const winston = require('winston');
+const config = require('../config/log.js');
 
 const options = {
     file: {
@@ -34,4 +34,4 @@ const logger = winston.createLogger({
     exitOnError: false,
 });
 
-export { logger };
+module.exports = { logger };
