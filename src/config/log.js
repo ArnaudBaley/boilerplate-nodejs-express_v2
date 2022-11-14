@@ -15,4 +15,4 @@ const getConsoleLoglevel = () => {
     return env !== dev ? defaultConsoleLoglevel : "debug"
 };
 
-export { getFileLoglevel, getConsoleLoglevel, maxSizeFile, maxFiles };
+module.exports = { getFileLoglevel, getConsoleLoglevel, maxSizeFile, maxFiles };
