@@ -1,0 +1,34 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "This application allow users to convert URLs in order to reduce the length of them.",
+  "main": "main.js",
+  "scripts": {
+    "start": "NODE_ENV=production node --experimental-specifier-resolution=node src/main.js",
+    "dev": "nodemon --experimental-specifier-resolution=node --inspect src/main.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnaudBaley/url-shortener.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArnaudBaley/url-shortener/issues"
+  },
+  "homepage": "https://github.com/ArnaudBaley/url-shortener#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.8.0",
+    "swagger-ui-express": "^4.6.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20"
+  }
+}
