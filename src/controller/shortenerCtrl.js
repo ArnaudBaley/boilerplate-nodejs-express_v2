@@ -4,7 +4,7 @@ const urlBusiness = require('../business/urlBusiness.js');
 const errorMessage = 'Something went wrong';
 
 const getUrl = async (req, res) => {
-    logger.debug(`BEGIN controller - getUrl`);
+    logger.debug(`BEGIN shortener controller - getUrl`);
     if (!req.params?.url || req.params.url === '') {
         return res.status(400).send({error: 'Missing parameter : url'});
     }
@@ -31,7 +31,7 @@ const getUrl = async (req, res) => {
 };
 
 const setUrl = async (req, res) => {
-    logger.debug(`BEGIN controller - setUrl`);
+    logger.debug(`BEGIN shortener controller - setUrl`);
     if (!req.body.originalUrl || req.body.originalUrl === '') {
         return res.status(400).send({error: 'Missing body parameter : originalUrl'});
     }
