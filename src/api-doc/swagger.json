@@ -6,9 +6,11 @@
         "version": "1.0"
     },
     "produces": ["application/json"],
+    "basePath": "localhost:3000",
     "paths": {
         "/my-project/api/shorturl": {
             "post": {
+                "summary": "Give an url and receive a short string that mapped it.",
                 "parameters": [
                     {
                         "name": "originalUrl",
@@ -19,8 +21,27 @@
                             "example": "www.reallylongbrandname.com"
                         }
                     }
-                ],
-                "responses": {}
+                ]
+            },
+            "get": {
+                "summary": "Retrieve original url from the short string.",
+                "parameters": [
+                    {
+                        "name": "shortUrl",
+                        "in": "path",
+                        "description": "short URL",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "X5XSGY"
+                        }
+                    }
+                ]
+            }
+        },
+        "/my-project/api/shorturl/analytics": {
+            "get": {
+                "summary": "Get all clicks for all url mapped."
             }
         }
     }

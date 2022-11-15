@@ -2,12 +2,9 @@
 
 ## About
 
-This application allow users to convert URLs in order to reduce the length of them.
-
-## Features
-
-XXXXXX
-
+This application allow users to map URLs with a tiny string.  
+A front-end can use it for redirections.  
+See API doc for details.
 
 ## API doc
 
@@ -40,6 +37,7 @@ CREATE TABLE public."mapping" (
 	id int4 NOT NULL,
 	original_url text NOT NULL,
 	short_url text NOT NULL,
+	nb_clicks int4 NULL DEFAULT 0,
 	CONSTRAINT mapping_pk PRIMARY KEY (id)
 );
 ```
@@ -79,4 +77,9 @@ npm run test:watch
 
 ## TODO
 
--Fix openapi baseURL KO
+-Linter
+-Improve openAPI doc  
+-Add back-end to docker
+-Fix TU mock -> use vitest ? babel ?  
+-Add TU in push hook
+-Add integration tests
