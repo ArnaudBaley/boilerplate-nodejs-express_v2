@@ -6,3 +6,6 @@ logs
 
 # Dependency directories
 node_modules/
+
+# local file history
+.history

@@ -1,3 +1,3 @@
-const appName = "my-project";
+const appName = "url-shortener";
 
 module.exports = { appName };

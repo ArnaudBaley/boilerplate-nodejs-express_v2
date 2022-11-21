@@ -43,7 +43,7 @@ CREATE TABLE public."mapping" (
 ```
 
 ```sql
-CREATE SEQUENCE tablename_colname_seq AS integer START 1 OWNED BY mapping.id;;
+CREATE SEQUENCE tablename_colname_seq AS integer START 1 OWNED BY mapping.id;
 ```
 
 ```sql

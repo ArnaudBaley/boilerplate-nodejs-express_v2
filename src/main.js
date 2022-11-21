@@ -16,6 +16,7 @@ app.use(httpLogger);
 app.use(bodyParser.json());
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+logger.info(`OpenAPI - http://localhost:${port}/api-docs`);
 
 app.get(`/${appName}/api/shorturl/analytics`, function(req, res) {
     analyticsCtrl.getAllUrls(req, res);
