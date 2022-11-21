@@ -27,10 +27,15 @@ const setUrl = async (url) => {
     let shortUrl = nanoid(6);
 
     // Collision detection
-    const alreadyExists = await urlDao.getShortUrl(shortUrl);
-    if (alreadyExists) {
-        logger.warn('ID already exists');
-        shortUrl = nanoid(6);
+    let alreadyExists = true;
+
+    while (alreadyExists) {
+        const result = await urlDao.getShortUrl(shortUrl);
+        if (result) {
+            logger.warn('ID already exists');
+            shortUrl = nanoid(6);
+        }
+        alreadyExists = false;
     }
 
     await urlDao.setUrl(url, shortUrl);
