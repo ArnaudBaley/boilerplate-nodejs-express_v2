@@ -6,7 +6,7 @@ const { isUrlValid } = require('../util/urlUtil')
 const getUrl = async (url) => {
     logger.debug(`BEGIN business - getUrl`);
     const result = await urlDao.getShortUrl(url);
-    if (!result) return result;
+    if (!result) return null;
 
     await urlDao.addClick(result.short_url, result.nb_clicks);
 
@@ -44,8 +44,6 @@ const setUrl = async (url) => {
 
 const addClick = async (shortUrl) => {
     logger.debug(`BEGIN business - addClick`);
-
-
     return await urlDao.getUrlAlls();
 };
 
