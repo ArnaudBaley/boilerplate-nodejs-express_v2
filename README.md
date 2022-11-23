@@ -80,6 +80,5 @@ npm run test:watch
 -Linter
 -Improve openAPI doc  
 -Add back-end to docker
--Fix TU mock -> use vitest ? babel ?  
--Add TU in push hook
+-Fix TU mock -> use vitest ? babel ?
 -Add integration tests
