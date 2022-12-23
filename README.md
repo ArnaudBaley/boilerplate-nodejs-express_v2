@@ -34,21 +34,14 @@ cd deploy
 Initialise DB with SQL commands :
 ```sql
 CREATE TABLE public."mapping" (
-	id int4 NOT NULL,
 	original_url text NOT NULL,
 	short_url text NOT NULL,
 	nb_clicks int4 NULL DEFAULT 0,
+	id serial4 NOT NULL,
 	CONSTRAINT mapping_pk PRIMARY KEY (id)
 );
 ```
 
-```sql
-CREATE SEQUENCE tablename_colname_seq AS integer START 1 OWNED BY mapping.id;
-```
-
-```sql
-ALTER TABLE mapping ALTER COLUMN id SET DEFAULT nextval('tablename_colname_seq');
-```
 
 ## Run & Debug
 
@@ -77,7 +70,8 @@ npm run test:watch
 
 ## TODO
 
--Linter
+-Request validator  
+-Linter  
 -Improve openAPI doc  
--Add back-end to docker
--Add integration tests
+-Add back-end to docker  
+-Add integration tests  
