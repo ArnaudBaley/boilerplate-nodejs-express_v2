@@ -31,5 +31,5 @@ app.post(`/${appName}/api/shorturl`, function(req, res) {
 });
 
 app.listen(port, () => {
-    logger.debug('App is running');
+    logger.debug(`App is running on port ${port}`);
 })
